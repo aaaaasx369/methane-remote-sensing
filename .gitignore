@@ -1,0 +1,46 @@
+# Data products
+*.tif
+*.tiff
+*.nc
+*.nc4
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.parquet
+*.feather
+*.zip
+*.tar
+*.tar.gz
+
+# Secrets / local config
+.env
+.env.*
+credentials.json
+secrets.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Research outputs
+results/
+outputs/
+data/
+checkpoints/
+weights/

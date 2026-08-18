@@ -1,0 +1,6 @@
+pandas
+numpy
+rasterio
+scikit-learn
+matplotlib
+earthengine-api==1.6.10

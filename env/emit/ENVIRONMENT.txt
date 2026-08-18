@@ -1,0 +1,30 @@
+EMIT MethaneFuse FINAL FREEZE environment
+================================================
+
+Created with:
+Python: 3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]
+Platform: macOS-26.5.2-arm64-arm-64bit
+
+MethaneFuse repo:
+Path: /Users/happydoraaa/MethaneFuse
+Git HEAD: c5591027dbdeb9c4b4c6be6a2c3b5838b925fb4e
+Git status --short:
+M scripts/eval/evaluate_classification.py
+ M thirdparty/dinov2/data/datasets/s2_csv.py
+?? .venv/
+?? aggregate_methanefuse_loso_results.py
+?? constraints-macos.txt
+?? five_site_loso_tools/
+?? requirements-macos.txt
+?? results/
+?? run_methanefuse_five_site_loso.slurm
+?? scripts/eval/evaluate_classification_with_predictions.py
+
+Checkpoint:
+Path: /Users/happydoraaa/MethaneFuse/checkpoints/classification/methanefuse_cls_480m.pt
+SHA256: 6b9f8591007b4a7116d6a37955a68ea5d4628f35479e0e9e3aad538eafb2c7e1
+
+Important interface semantics:
+- emit_0_path   = actual t0
+- emit_90_path  = actual ~t-90
+- emit_360_path = actual ~t-180 for EMIT compatibility with the generic loader

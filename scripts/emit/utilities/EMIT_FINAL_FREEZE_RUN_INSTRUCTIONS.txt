@@ -1,0 +1,42 @@
+EMIT FINAL FREEZE — RUN INSTRUCTIONS
+
+1) Download freeze_emit_final.py and place it in:
+   ~/methane_release_project/
+
+2) Activate the same Python environment you used for the EMIT build.
+
+3) Run:
+
+cd ~/methane_release_project
+
+python3 freeze_emit_final.py
+
+Default output:
+~/methane_release_project/EMIT_MethaneFuse_FINAL_FREEZE
+
+The script verifies:
+- primary dataset = 19 pairs / 38 samples
+- strict30 subset = 11 pairs / 22 samples
+- 114 unique real-temporal TIFFs
+- every TIFF = 16 x 518 x 518 uint16
+- all four metric JSON counts match their manifests
+- matched ablations use identical rows/labels
+- repeated-t0 manifests really point all temporal slots to t0
+
+Then it copies the final 114 TIFFs and creates:
+- README_FINAL.md
+- FINAL_METRICS.json
+- RESULTS_TABLE.csv
+- FREEZE_INVENTORY.csv
+- SHA256SUMS.txt
+- ENVIRONMENT.txt
+- FREEZE_COMPLETE.txt
+- dataset/
+- samples/
+- metrics/
+- provenance/
+- scripts/
+
+If the output folder already exists, the script refuses to overwrite it.
+Only if you intentionally want to rebuild:
+python3 freeze_emit_final.py --overwrite
